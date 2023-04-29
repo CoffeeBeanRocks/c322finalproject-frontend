@@ -10,7 +10,7 @@ const NotificationPreferencePage = () => {
 
     const fetchAccounts = async () => {
         try {
-            const response = await fetch('http://localhost:8080/accounts');
+            const response = await fetch('c322finalproject-backend-production.up.railway.app/accounts');
             const accountData = await response.json();
 
             setAccounts(accountData);
@@ -45,7 +45,7 @@ const NotificationPreferencePage = () => {
     const updateNotificationPreference = async (accountId, emailPreference) => {
         try {
             const response = await fetch(
-                `http://localhost:8080/update/notification/${accountId}/${emailPreference}`,
+                `c322finalproject-backend-production.up.railway.app/${accountId}/${emailPreference}`,
                 {
                     method: 'PUT',
                     headers: {

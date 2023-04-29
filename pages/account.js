@@ -5,7 +5,7 @@ function BankAccountPage() {
     const [selectedAccount, setSelectedAccount] = useState(null);
 
     useEffect(() => {
-        fetch("http://localhost:8080/accounts")
+        fetch("c322finalproject-backend-production.up.railway.app/accounts")
             .then(response => response.json())
             .then(data => {
                 console.log(data);

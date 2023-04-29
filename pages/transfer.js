@@ -17,7 +17,7 @@ function TransferPage() {
         event.preventDefault();
 
         if (recipientEmail && transferAmount) {
-            fetch('http://localhost:8080/api/transfers', {
+            fetch('c322finalproject-backend-production.up.railway.app/transfers', {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' },
                 body: JSON.stringify({ recipientEmail, transferAmount })
